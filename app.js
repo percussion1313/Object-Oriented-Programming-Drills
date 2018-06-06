@@ -1,6 +1,6 @@
 
 //Added 5 people
-/*var p1 = {
+var p1 = {
     name: 'Steve',
     sayHello: function () {
         console.log(`Hello! My name is ${p1.name}`);
@@ -42,11 +42,11 @@ name: 'Cheryl',
     }
 }
 
-p5.sayHello(); */
+p5.sayHello(); 
 
 
 //The string we'll use.
-/*(`Hey! My name is ${name} I am ${age} years old and live in ${location}`)*/
+(`Hey! My name is ${name} I am ${age} years old and live in ${location}`)*/
 
 function Person(name, age, location) {
     this.name = name;
@@ -57,6 +57,32 @@ function Person(name, age, location) {
 Person.prototype.sayHowdy = function() {
     console.log(`Hey! My name is ${this.name} I am ${this.age} years old and live in ${this.location}`);
    }
+
+let p1 = new Person('Steve', 63, 'Orlando');
+let p2 = new Person('Julian', 30, 'Orlando')
+let p3 = new Person('Jordan', 26, 'Orlando')
+let p4 = new Person('Janice', 65, 'Orlando')
+let p5 = new Person('Cheryl', 58, 'Orlando')
+
+p1.sayHowdy();
+p2.sayHowdy();
+p3.sayHowdy();
+p4.sayHowdy();
+p5.sayHowdy();
+
+
+//Used class designation
+class Person {
+    constructor(name, age,location) {
+    this.name = name;
+    this.age = age;
+    this.location = location;
+    }
+    sayHowdy() {
+        console.log(`Hey! My name is ${this.name} I am ${this.age} years old and live in ${this.location}`);
+       }
+    }
+
 
 let p1 = new Person('Steve', 63, 'Orlando');
 let p2 = new Person('Julian', 30, 'Orlando')
